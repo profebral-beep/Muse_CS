@@ -1,5 +1,5 @@
-Lang Muse_CS v0.1
-Permissions Requested: read, execute_method, move
+Lang Muse_CS v0.2
+Permit: read, execute_method
 Scope: file
 Load now, run on trigger
 

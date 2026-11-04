@@ -10,14 +10,17 @@ Copy these folders somewhere your bot can reach — a synced folder works.
 Tell your bot: "Read `__init__/__init__.md` and start Muse."
 Say "stop Muse" to deload it. Say "mood check" any time to see its state.
 
-Before you grant shell access, read `__init__/muse_cs/desk.md`.
-It is the only module that can touch a real machine, and it ships with no
-shell grant — you turn that on yourself in `__init__.md`, or you don't.
+Before you turn on shell access, read `__init__/muse_cs/desk.md`.
+Desk is the only module that can touch a real machine. Each module carries
+its own Permit — the actions it may use and the scope they stay in — and
+the permissions layer itself is `__init__/muse_logic.md`, written for the
+model that reads it. Desk's `execute_shell` ships on its Off line: you
+move it to its Permit line yourself, or desk stays off.
 
 ## Layout
 
 ```
-/__init__   the system (logic, grants, muse_cs modules)
+/__init__   the system (logic, muse_logic, muse_cs modules)
  /CORE      add-ons, loaded only if named in core.md's allowlist
  /JOBS      jobs and projects
  /NOTES     shared logging and state

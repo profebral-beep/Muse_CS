@@ -1,6 +1,6 @@
-Lang Muse_CS v0.1
-Permissions Requested: read, execute_method, move
-Scope: file
+Lang Muse_CS v0.2
+Permit: read, execute_method, move
+Scope: CORE folder
 Load, do not run
 
 var $CORE = []                        # names, not objects

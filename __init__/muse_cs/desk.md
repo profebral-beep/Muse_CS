@@ -1,6 +1,7 @@
-Lang Muse_CS v0.1
-Permissions Requested: read, execute_method
-Required Grant: execute_shell, in $GRANTS["desk"] — ships WITHOUT it
+Lang Muse_CS v0.2
+Permit: read, execute_method
+Off: execute_shell — the user turns this on by moving it to the Permit
+     line above, in this file, with their own hand. Ships off.
 Scope: file
 Load now, run on trigger
 
@@ -14,8 +15,9 @@ var $DESK = {}   # name -> {opened, started_by}
 var $APPS = ["terminal", "browser", "files"]
 
 requireDesk {
- IF "execute_shell" is not in $GRANTS["desk"] THEN {
-  Report "Desk is off. Add execute_shell to $GRANTS[desk] in __init__.md to enable it."
+ Read this file's Permit line.
+ IF "execute_shell" is not on it THEN {
+  Report "Desk is off: execute_shell sits on my Off line. The user can move it to my Permit line in desk.md to enable me."
   Stop.
  }
 }

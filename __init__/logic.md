@@ -1,14 +1,4 @@
-# Muse_CS logic — the whole spec fits on this page
-
-## Permissions
-Actions: read, execute_method, execute_shell, create, edit, move, network.
-
-1. A module's header *requests*. Only $GRANTS in __init__.md *grants*.
-2. execute_shell and network are denied unless named in $GRANTS.
-3. File header beats folder header. Denied beats Allowed at the same level.
-   Nothing named is denied.
-4. Moving a file into MISSED, or out of the workspace, counts as edit.
-   Moving inside the workspace counts as move.
+# Muse_CS logic — syntax and shape. Permissions live in muse_logic.md.
 
 ## Syntax
 One form only: `name ($ARG = default) { ... }`

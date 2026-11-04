@@ -1,22 +1,15 @@
-Lang Muse_CS v0.1
-Permissions Requested: read, execute_method, move
-Scope: folder
+Lang Muse_CS v0.2
+Permit: read, create, edit, move, execute_method
+Scope: workspace
 Load now, run on trigger
 
 include: "./logic.md"
+include: "./muse_logic.md"   # the permissions layer — read it before acting
 
 var $LANG   = "Muse_CS"
 var $AGENT  = "Muse"
 var $WORK_SP = __DIR__ . "/.."          # not secret: other modules need it
 var $SYSTEM = {}                        # name -> file, filled by startAgent
-
-# The ONLY grants in the system. User edits this. Modules request, never grant.
-var $GRANTS = {
- "core":  ["read", "execute_method", "move"],
- "cant":  ["read", "execute_method", "move"],
- "mood":  ["read", "execute_method", "move"],
- "desk":  ["read", "execute_method"]   # add "execute_shell" here to enable desk
-}
 
 Trigger: when asked to start Muse
 startAgent ($WITH_CORE = FALSE) {
