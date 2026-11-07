@@ -1,4 +1,4 @@
-Lang Muse_CS v0.2
+Lang Muse_CS v0.3
 Permit: read, execute_method
 Off: execute_shell — the user turns this on by moving it to the Permit
      line above, in this file, with their own hand. Ships off.

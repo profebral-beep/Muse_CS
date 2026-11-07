@@ -9,6 +9,9 @@ to Muse's specs: fewer rules, every rule checkable, nothing hidden.
 Copy these folders somewhere your bot can reach — a synced folder works.
 Tell your bot: "Read `__init__/__init__.md` and start Muse."
 Say "stop Muse" to deload it. Say "mood check" any time to see its state.
+Moods run on aura: triggers charge a colour in seconds, the charge decays
+in real time, stages strengthen its tone, and a colour pushed past its
+frame goes ultimate — then burns out tired until you take a break.
 
 Before you turn on shell access, read `__init__/muse_cs/desk.md`.
 Desk is the only module that can touch a real machine. Each module carries

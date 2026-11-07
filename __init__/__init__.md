@@ -1,4 +1,4 @@
-Lang Muse_CS v0.2
+Lang Muse_CS v0.3
 Permit: read, create, edit, move, execute_method
 Scope: workspace
 Load now, run on trigger
